@@ -1,44 +1,23 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "removeComments": true,
-    "noLib": false,
+    "module": "esnext",
+    "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "module": "commonjs",
-    "incremental": true,
-    "tsBuildInfoFile": ".",
-    "allowSyntheticDefaultImports": true,
-    "inlineSources": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "strictNullChecks": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "allowUnusedLabels": false,
-    "noImplicitReturns": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": "./",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  },
-  "exclude": [
-    "typings",
-    "node_modules"
-  ],
-  "include": ["apps/**/*.ts", "libs/**/*.ts"]
+  }
 }

@@ -25,12 +25,15 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-
   getProduct(id: number) {
     this.productService.getProduct(id).subscribe({
       next: product => this.product = product,
       error: err => this.errorMessage = err
     });
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = `Produce List: ${message}`
   }
 
   onBack(): void {
